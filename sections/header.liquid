@@ -1,0 +1,1526 @@
+<!-- mega menu css start -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+.shopify-section__header {
+    z-index: 9999 !important;
+}
+.header-main-sec {
+    background: #FFFFFF;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+.header-inner-area {
+    max-width: 1480px;
+    padding: 0px 40px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-main-menu {
+    max-width: calc(100% - 270px);
+    width: 100%;
+}
+nav.navmenu {
+    position: relative;
+}
+nav.navmenu > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav.navmenu > ul > li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+nav.navmenu>ul>li:not(:last-child) {
+    margin: 0 10px;
+}
+{% comment %} nav.navmenu > ul > li:last-child {
+    margin-left: auto;
+} {% endcomment %}
+nav.navmenu > ul > li:empty {
+  display: none;
+}
+nav.navmenu > ul > li > a {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+nav.navmenu .sub-menu {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    background: #FFFFFF;
+    min-width: 220px;
+    padding: 12px 0px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px) translateZ(0);
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1),transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav.navmenu .sub-menu .sub-menu {
+    top: 0;
+    left: 100%;
+}
+nav.navmenu > ul > li:hover > .sub-menu, 
+nav.navmenu > ul > li:hover > .sub-menu > ul > li:hover > .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: none !important;
+    pointer-events: unset;
+}
+nav.navmenu .sub-menu ul {
+    list-style: none;
+}
+nav.navmenu .sub-menu ul li {
+    position: relative;
+}
+nav.navmenu .sub-menu ul li a {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #848484;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+nav.navmenu > ul > li > a:hover, 
+nav.navmenu .sub-menu ul li a:hover {
+    color: #f56618;
+}
+nav.navmenu .sub-menu ul li a svg {
+    width: 8px;
+    height: auto;
+    fill: rgba(82,82,82,0.45);
+    margin-left: auto;
+}
+
+.header-category-menu {
+    max-width: 270px;
+    width: 100%;
+    position: relative;
+}
+.header-category-btn > a {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: #f56618;
+    padding: 10px 15px;
+    width: 100%;
+    height: 54px;
+    display: flex;
+    align-items: center;
+}
+.header-category-btn > a > svg {
+    fill: #FFFFFF;
+}
+.header-category-btn > a > svg:first-child {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+.header-category-btn > a > svg:last-child {
+    width: 11px;
+    height: 11px;
+    margin-left: auto;
+}
+.nav-megamenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFFFFF;
+    width: 100%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px) translateZ(0);
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1),transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.header-category-btn:hover .nav-megamenu {
+    visibility: visible;
+    opacity: 1;
+    transform: none !important;
+    pointer-events: unset;
+}
+.nav-megamenu ul {
+    list-style: none;
+}
+.nav-megamenu ul > li > a {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    transition: all .25s ease;
+}
+.nav-megamenu ul > li > a:hover {
+    color: #555555;
+    background: #F7F7F7;
+}
+.nav-megamenu ul > li > a > svg {
+    width: 6px;
+    height: auto;
+    margin-left: auto;
+    fill: rgba(82, 82, 82, .45);
+}
+.megamenu-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    max-width: 800px;
+    min-width: 800px;
+    padding: 30px 35px 0 35px;
+    background: #FFFFFF;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-15px) translateY(0) translateZ(0);
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1),transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.nav-megamenu ul > li:hover .megamenu-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: none !important;
+    pointer-events: unset;
+}
+.megamenu-dropdown-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.megamenu-cate-item {
+    flex: 0 0 20%;
+    max-width: 33.33%;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+.megamenu-cate-item a {
+    display: flex;
+    flex-direction: column;
+}
+.megamenu-cate-img {
+    display: flex;
+    position: relative;
+    padding-top: 100%;
+    margin-bottom: 10px;
+    transition: transform 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+}
+.megamenu-cate-item a:hover .megamenu-cate-img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+.megamenu-cate-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.megamenu-cate-item a h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+    text-align: center;
+    margin: 0;
+}
+.megamenu-cate-item a span {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #777777;
+    display: block;
+    text-align: center;
+}
+@media screen and (max-width: 1366px) {
+    .header-category-menu {
+        max-width: 214px;
+    }
+    .header-main-menu {
+        max-width: calc(100% - 214px);
+        width: 100%;
+    }
+    nav.navmenu > ul > li:not(:last-child) {
+        margin: 0 6px;
+    }
+    nav.navmenu > ul > li > a {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .megamenu-dropdown {
+        max-width: 680px;
+        min-width: 680px;
+        padding: 20px 25px 0;
+    }
+    .header-main-menu {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 999px) {
+    .header-desktop-sec {
+        display: none;
+    }
+}
+
+
+.header-mobile-sec {
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    display: none;*/
+    position: relative;
+    z-index: 11;
+}
+.header-mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: rgba(0,0,0,0.7);
+    /*opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1),visibility 0s cubic-bezier(0.19, 1, 0.22, 1) 0.5s,z-index 0s cubic-bezier(0.19, 1, 0.22, 1) 0.5s,top 0s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;*/
+    display: none;
+}
+/*.header-mobile-sec.nav-open .header-mobile-overlay {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: unset;
+}*/
+.header-mobile-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    width: 100%;
+    height: 100vh;
+    background: #FFFFFF;
+    z-index: 1;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.header-mobile-sec.nav-open .header-mobile-inner {
+    transform: none;
+}
+.header-mobile-nav {
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 110px;
+}
+.header-mobile-nav .header__search-bar-wrapper {
+    position: relative;
+    z-index: 2;
+    visibility: visible;
+    padding: 0;
+    height: auto;
+}
+.header-mobile-nav form.search-bar {
+    box-shadow: 0 -1px 9px #0000002b;
+    padding: 0 !important;
+    opacity: 1;
+}
+.header-mobile-nav form.search-bar button.search-bar__close-button {
+    display: none;
+}
+.header-mobile-nav form.search-bar .search-bar__top-wrapper .search-bar__top {
+    height: auto;
+    box-shadow: none;
+    align-items: unset;
+}
+.header-mobile-nav form.search-bar .search-bar__input-wrapper input.search-bar__input {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #777777;
+    height: 70px;
+    padding-left: 20px;
+}
+.header-mobile-nav form.search-bar button.search-bar__submit {
+    height: auto;
+}
+.header-mobile-nav form.search-bar button.search-bar__submit {
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: #777777;
+}
+
+.tab-menu-head ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px solid rgba(0,0,0,0.105);
+    background-color: rgba(0,0,0,0.04);
+}
+.tab-menu-head ul li {
+    width: 50%;
+}
+.tab-menu-head ul li a {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #909090;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 18px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all .25s ease;
+}
+.tab-menu-head ul li a.active {
+    background: rgba(0,0,0,0.05);
+}
+.tab-menu-head ul li a:after {
+    content: '';
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #f56618;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+.tab-menu-head ul li:first-child a:after {
+    left: auto;
+    right: 0;
+}
+.tab-menu-head ul li > a:hover:after, 
+.tab-menu-head ul li > a.active:after {
+    width: 100%
+}
+.mobile-category-menu ul {
+    list-style: none;
+}
+.mobile-category-menu ul li a {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #333333;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    min-height: 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.105);
+    display: flex;
+    align-items: center;
+}
+nav.mobile-navmenu ul {
+    list-style: none;
+}
+nav.mobile-navmenu ul li {
+    position: relative;
+}
+nav.mobile-navmenu ul li a {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #333333;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    min-height: 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.105);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+nav.mobile-navmenu ul li:has(span.icon) > a {
+    padding-right: 60px;
+}
+nav.mobile-navmenu ul li span.icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgba(0,0,0,.105);
+    z-index: 1 !important;
+    pointer-events: unset;
+}
+nav.mobile-navmenu ul li span.icon.menu-open {
+    background: #f56618;
+}
+nav.mobile-navmenu ul li span.icon.menu-open svg {
+    transform: rotate(90deg);
+    fill: #FFFFFF;
+}
+nav.mobile-navmenu ul li span.icon svg {
+    width: 12px;
+    fill: #242424;
+    transition: all 0.3s ease-in-out;
+}
+nav.mobile-navmenu .sub-menu {
+    display: none;
+}
+nav.mobile-navmenu .sub-menu ul li a {
+    color: #848484;
+    text-transform: capitalize;
+}
+
+.header-mobile-nav form.search-bar .search-bar__inner {
+    height: calc(100vh - 70px);
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+}
+.header-mobile-nav form.search-bar .search-bar__inner .search-bar__results {
+    margin: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    padding-bottom: 20px;
+}
+/* navbar */
+
+.navbar {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  -webkit-box-shadow: 0 20px 50px 0 rgb(0 0 0 / 5%);
+  box-shadow: 0 20px 50px 0 rgb(0 0 0 / 5%);
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* nav menu button */
+
+.navbar .menu-btn__lines::before,
+.navbar .menu-btn__lines::after {
+  content: "";
+  position: absolute;
+}
+
+.navbar .menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+  transition: 0.3s ease;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #112f48;
+}
+
+/* dropdown menu */
+
+.expand-btn:after {
+  content: " \25BE";
+  opacity: 0.4;
+  margin-left: 5px;
+}
+
+.navbar .menu-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  font-size: 14px;
+}
+.navbar .menu-item:hover {
+  color: #ff5722;
+}
+
+.menu-item.first-item {
+  padding: 1.5rem 1rem;
+}
+
+/* mega menu  */
+
+.navbar .mega-menu {
+  position: absolute;
+  left: -32%;
+  width: 100vw;
+  top: 65px;
+  border-top: 1px solid #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-out 0s, visibility 0.1s linear 0s;
+}
+
+.mega-menu .content {
+  background: #e9ecef;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  -webkit-box-shadow: 0 20px 50px 0 rgb(0 0 0 / 5%);
+  box-shadow: 0 20px 50px 0 rgb(0 0 0 / 5%);
+}
+
+.blog .content {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.content .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 3rem;
+}
+
+.content .col .img-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 20vw;
+  overflow: hidden;
+}
+
+.content .col .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.content .col img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content .col .img-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.content .col .menu-title {
+  color: #ff5722;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.content .col p {
+  line-height: 1.2rem;
+  margin-top: 5px;
+  color: #112f48;
+}
+
+.content .col .mega-links {
+  border-left: 1px solid #3c3c3c;
+}
+
+.content .col .read-more {
+  font-size: 16px;
+  display: flex;
+  padding-top: 1rem;
+  color: #03a9f4;
+  transition: color 0.3s ease;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.col .mega-links li,
+.col .mega-links li a {
+  padding: 0 1rem;
+}
+
+.menu-items li:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content .col .read-more:hover {
+  color: #ff5722;
+}
+
+/* Responsive style */
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .menu-items {
+    position: fixed;
+    height: 100%;
+    max-height: initial;
+    overflow-y: auto;
+    width: 80%;
+    top: 65px;
+    left: 0;
+    background: #fcfcfc;
+    display: block;
+    transform: translateX(-100vh);
+    transition: 0.3s ease-out;
+    padding-bottom: 100px;
+  }
+
+  .menu-items li:first-child {
+    margin-top: 20px;
+  }
+
+  .menu-items li a {
+    padding: 10px 1rem;
+    display: block;
+    font-size: 18px;
+  }
+
+  .menu-item.first-item {
+    padding: 1rem 1rem;
+  }
+
+  /* DROPDOWN, MEGA MENUS */
+  .menu-items .mega-menu {
+    position: static;
+    opacity: 1;
+    top: 4rem;
+    visibility: visible;
+    margin-left: -18px;
+    width: auto;
+    max-height: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .menu-items .mega-menu .col {
+    padding-left: 1rem;
+  }
+
+  .expand-btn.open + .sample {
+    max-height: 100%;
+    transform: scaleZ(1);
+  }
+
+  .expand-btn.open + .blog.sample {
+    max-height: 100%;
+    transform: scaleZ(1);
+    max-width: fit-content;
+  }
+
+  .navbar .sample {
+    border-top: none;
+  }
+
+  .sample li {
+    margin: 0;
+  }
+
+  .sample li:last-child {
+    border-bottom: none;
+  }
+
+  .sample li a {
+    font-size: 1rem;
+  }
+
+  .mega-menu .content {
+    grid-template-columns: auto;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .mega-menu .content .col {
+    width: 100%;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .col .mega-links li,
+  .col .mega-links li a {
+    padding: 0 0.5rem;
+  }
+
+  .content .col .mega-links {
+    border-left: 0;
+    padding-left: 0.5rem;
+  }
+  .col .mega-links li {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+    header.header:not(.header--condensed) {
+        padding-bottom: 10px;
+    }
+}
+</style>
+<!-- mega menu css end -->
+<div class="header-main-sec header-desktop-sec">
+  <div class="header-inner-area">
+    <div class="header-category-menu">
+      <div class="header-category-btn">
+        <a href="javascript:void(0)">
+          <svg viewBox="0 0 20 16" role="presentation">
+            <path d="M0 14h20v2H0v-2zM0 0h20v2H0V0zm0 7h20v2H0V7z" fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+          <span>{{ section.settings.cat_title }}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+          </svg>
+        </a>
+        <div class="nav-megamenu">
+          <ul>
+            {% for block in section.blocks %}
+              {% if block.type == 'custom_mega_menu' %}
+                <li>
+                  {% if block.settings.main_mega_menu_title_link != blank %}
+                    <a href="{{ block.settings.main_mega_menu_title_link }}">
+                  {% endif %}
+                  {% if block.settings.main_mega_menu_title != blank %}
+                    <span>{{ block.settings.main_mega_menu_title }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                      <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                    </svg>
+                  {% endif %}
+                  {% if block.settings.main_mega_menu_title_link != blank %}
+                    </a>
+                  {% endif %}
+
+                  {% if block.settings.menu_item_img_1 != blank
+                    or block.settings.menu_item_img_2 != blank
+                    or block.settings.menu_item_img_3 != blank
+                    or block.settings.menu_item_img_4 != blank
+                    or block.settings.menu_item_img_5 != blank
+                    or block.settings.menu_item_img_6 != blank
+                    or block.settings.menu_item_img_7 != blank
+                    or block.settings.menu_item_img_8 != blank
+                  %}
+                    <div class="megamenu-dropdown">
+                      <div class="megamenu-dropdown-category">
+                        <div class="megamenu-dropdown-row">
+
+                        {% if block.settings.desktop_cat_submenu != blank %}
+                        <div class="megamenu-cate-item">
+                        <div class="menu-wrapper">
+                          {%  assign menu_title = linklists[block.settings.desktop_cat_submenu].title %}
+                          <h2>{{ menu_title }}</h2>
+                          <ul>
+                            {% for link in linklists[block.settings.desktop_cat_submenu].links %}
+                            <li>
+                              <a href="{{ link.url }}">{{link.title}}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        </div>
+                          {% endif %}
+
+                          {% if block.settings.desktop_cat_submenu1 != blank %}
+                        <div class="megamenu-cate-item">
+                        <div class="menu-wrapper">
+                          {%  assign menu_title = linklists[block.settings.desktop_cat_submenu1].title %}
+                          <h2>{{ menu_title }}</h2>
+                          <ul>
+                            {% for link in linklists[block.settings.desktop_cat_submenu1].links %}
+                            <li>
+                              <a href="{{ link.url }}">{{link.title}}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        </div>
+                          {% endif %}
+
+                          {% if block.settings.desktop_cat_submenu2 != blank %}
+                        <div class="megamenu-cate-item">
+                        <div class="menu-wrapper">
+                          {%  assign menu_title = linklists[block.settings.desktop_cat_submenu2].title %}
+                          <h2>{{ menu_title }}</h2>
+                          <ul>
+                            {% for link in linklists[block.settings.desktop_cat_submenu2].links %}
+                            <li>
+                              <a href="{{ link.url }}">{{link.title}}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        </div>
+                          {% endif %}
+
+                       
+
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_1 != blank %}
+                              <a href="{{ block.settings.menu_item_link_1 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_1 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_1 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_1.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_1 != blank %}
+                              <h3>{{ block.settings.menu_item_title_1 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_1 != blank %}
+                              <span>{{ block.settings.menu_item_text_1 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_1 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_2 != blank %}
+                              <a href="{{ block.settings.menu_item_link_2 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_2 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_2 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_2.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_2 != blank %}
+                              <h3>{{ block.settings.menu_item_title_2 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_2 != blank %}
+                              <span>{{ block.settings.menu_item_text_2 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_2 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_3 != blank %}
+                              <a href="{{ block.settings.menu_item_link_3 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_3 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_3 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_3.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_3 != blank %}
+                              <h3>{{ block.settings.menu_item_title_3 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_3 != blank %}
+                              <span>{{ block.settings.menu_item_text_3 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_3 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_4 != blank %}
+                              <a href="{{ block.settings.menu_item_link_4 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_4 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_4 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_4.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_4 != blank %}
+                              <h3>{{ block.settings.menu_item_title_4 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_4 != blank %}
+                              <span>{{ block.settings.menu_item_text_4 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_4 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_5 != blank %}
+                              <a href="{{ block.settings.menu_item_link_5 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_5 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_5 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_5.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_5 != blank %}
+                              <h3>{{ block.settings.menu_item_title_5 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_5 != blank %}
+                              <span>{{ block.settings.menu_item_text_5 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_5 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_6 != blank %}
+                              <a href="{{ block.settings.menu_item_link_6 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_6 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_6 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_6.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_6 != blank %}
+                              <h3>{{ block.settings.menu_item_title_6 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_6 != blank %}
+                              <span>{{ block.settings.menu_item_text_6 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_6 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_7 != blank %}
+                              <a href="{{ block.settings.menu_item_link_7 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_7 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_7 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_7.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_7 != blank %}
+                              <h3>{{ block.settings.menu_item_title_7 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_7 != blank %}
+                              <span>{{ block.settings.menu_item_text_7 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_7 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+
+                          <div class="megamenu-cate-item">
+                            {% if block.settings.menu_item_link_8 != blank %}
+                              <a href="{{ block.settings.menu_item_link_8 }}">
+                            {% endif %}
+                            {% if block.settings.menu_item_img_8 != blank %}
+                              <div class="megamenu-cate-img">
+                                <img
+                                  src="{{ block.settings.menu_item_img_8 | image_url: width: 160, height: 160 }}"
+                                  alt="{{ block.settings.menu_item_img_8.alt }}"
+                                >
+                              </div>
+                            {%- endif %}
+                            {% if block.settings.menu_item_title_8 != blank %}
+                              <h3>{{ block.settings.menu_item_title_8 }}</h3>
+                            {%- endif %}
+                            {% if block.settings.menu_item_text_8 != blank %}
+                              <span>{{ block.settings.menu_item_text_8 }}</span>
+                            {%- endif %}
+                            {% if block.settings.menu_item_link_8 != blank %}
+                              </a>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+     <!--================================== Desktop Mega Menu Top =========================-->
+    <div class="header-main-menu">
+      <nav class="navmenu">
+        <header class="navbar sticky">
+
+
+
+        <ul class="menu-items">
+
+        {% for block in section.blocks %}
+          {% if block.type == 'top_mega_menu' %}
+          <li>
+            {% if block.settings.tp_title != blank %}
+            <a href="{{ block.settings.tp_title_link }}" 
+            class="menu-item first-item 
+            {% if block.settings.tp_img_title != blank
+or block.settings.tp_image != blank
+or block.settings.tp_image_link != blank
+or block.settings.tp_menu1 != blank
+or block.settings.tp_menu2 != blank
+or block.settings.tp_menu3 != blank %}
+            expand-btn
+        {% endif %}
+            ">{{ block.settings.tp_title }}</a>
+            {% endif %}
+
+{% if block.settings.tp_img_title != blank
+or block.settings.tp_image != blank
+or block.settings.tp_image_link != blank
+or block.settings.tp_menu1 != blank
+or block.settings.tp_menu2 != blank
+or block.settings.tp_menu3 != blank %}
+            <div class="mega-menu sample">
+              <div class="content">
+
+
+                {% if block.settings.tp_img_title == blank and block.settings.tp_image == blank %}
+                {% else %}
+                <div class="col">
+                  <section>
+                  {% if block.settings.tp_img_title != blank %}
+                    <div class="menu-title">{{ block.settings.tp_img_title }}</div>
+          {% endif %}
+
+                    {% if block.settings.tp_image != blank %}
+                    <a href="{{ block.settings.tp_image_link }}" class="img-wrapper">
+                      <span class="img">
+                        <img
+                            src="{{ block.settings.tp_image | image_url: width: 400, height: 400 }}"
+                            alt="{{ block.settings.tp_image.alt }}"
+                        >
+                      </span>
+                    </a>
+          {% endif %}
+                  </section>
+                </div>
+              {% endif %}
+
+
+
+
+
+              {% if block.settings.tp_menu1 != blank %}
+              <div class="col">
+                <section>
+                {%  assign menu_title = linklists[block.settings.tp_menu1].title %}
+                <div class="menu-title">{{ menu_title }}</div>
+                <ul class="mega-links">
+                  {% for link in linklists[block.settings.tp_menu1].links %}
+                  <li>
+                    <a class="menu-item" href="{{ link.url }}">{{link.title}}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                </section>
+              </div>
+                {% endif %}
+
+                {% if block.settings.tp_menu2 != blank %}
+                <div class="col">
+                  <section>
+                  {%  assign menu_title = linklists[block.settings.tp_menu2].title %}
+                  <div class="menu-title">{{ menu_title }}</div>
+                  <ul class="mega-links">
+                    {% for link in linklists[block.settings.tp_menu2].links %}
+                    <li>
+                      <a class="menu-item" href="{{ link.url }}">{{link.title}}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  </section>
+                </div>
+                  {% endif %}
+
+
+                  {% if block.settings.tp_menu3 != blank %}
+                  <div class="col">
+                    <section>
+                    {%  assign menu_title = linklists[block.settings.tp_menu3].title %}
+                    <div class="menu-title">{{ menu_title }}</div>
+                    <ul class="mega-links">
+                      {% for link in linklists[block.settings.tp_menu3].links %}
+                      <li>
+                        <a class="menu-item" href="{{ link.url }}">{{link.title}}</a>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                    </section>
+                  </div>
+                    {% endif %}
+
+
+
+              </div>
+            </div>
+                  {% endif %}
+          </li>
+          {% endif %}
+        {% endfor %}
+
+      
+        </ul>
+      </header>
+      
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+      "type": "header",
+      "content": "CUSTOM MEGA MENU SETTINGS FOR DESKTOP"
+    },
+    {
+         "type":"text",
+         "id":"cat_title",
+         "label":"Categories Text",
+         "default":"Browse Categories"
+      },
+  {
+      "type": "link_list",
+      "id": "desktop_menu",
+      "label": "Desktop Menu",
+      "default": "main-menu"
+    }
+    ],
+    "blocks": [
+    {
+    "type": "custom_mega_menu",
+    "name": "Category Mega Menu",
+    "settings": [
+      {
+          "type": "text",
+          "id": "main_mega_menu_title",
+          "label": "Main Title"
+      },
+      {
+          "type": "url",
+          "id": "main_mega_menu_title_link",
+          "label": "Main Title Link"
+      },
+      {
+        "type": "link_list",
+        "id": "desktop_cat_submenu",
+        "label": "Desktop Category Sub Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "desktop_cat_submenu1",
+        "label": "Desktop Category Sub Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "desktop_cat_submenu2",
+        "label": "Desktop Category Sub Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 1"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_1",
+            "label": "Image 1"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_1",
+          "label": "Title 1"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_1",
+          "label": "Text 1"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_1",
+          "label": "Link 1"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 2"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_2",
+            "label": "Image 2"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_2",
+          "label": "Title 2"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_2",
+          "label": "Text 2"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_2",
+          "label": "Link 2"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 3"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_3",
+            "label": "Image 3"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_3",
+          "label": "Title 3"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_3",
+          "label": "Text 3"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_3",
+          "label": "Link 3"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 4"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_4",
+            "label": "Image 4"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_4",
+          "label": "Title 4"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_4",
+          "label": "Text 4"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_4",
+          "label": "Link 4"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 5"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_5",
+            "label": "Image 5"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_5",
+          "label": "Title 5"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_5",
+          "label": "Text 5"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_5",
+          "label": "Link 5"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 6"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_6",
+            "label": "Image 6"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_6",
+          "label": "Title 6"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_6",
+          "label": "Text 6"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_6",
+          "label": "Link 6"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 7"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_7",
+            "label": "Image 7"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_7",
+          "label": "Title 7"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_7",
+          "label": "Text 7"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_7",
+          "label": "Link 7"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 8"
+      },
+      {
+            "type": "image_picker",
+            "id": "menu_item_img_8",
+            "label": "Image 8"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_title_8",
+          "label": "Title 8"
+      },
+      {
+          "type": "text",
+          "id": "menu_item_text_8",
+          "label": "Text 8"
+      },
+      {
+          "type": "url",
+          "id": "menu_item_link_8",
+          "label": "Link 8"
+      }
+    ]
+  },
+  {
+    "type": "top_mega_menu",
+    "name": "Top Mega Menu",
+    "settings": [
+      {
+          "type": "text",
+          "id": "tp_title",
+          "label": "Main Menu Title"
+      },
+      {
+          "type": "url",
+          "id": "tp_title_link",
+          "label": "Main Menu Link"
+      },
+      {
+            "type": "image_picker",
+            "id": "tp_image",
+            "label": "Image"
+      },
+      {
+            "type": "url",
+            "id": "tp_image_link",
+            "label": "Image Link"
+      },
+      {
+          "type": "text",
+          "id": "tp_img_title",
+          "label": "Image Title"
+      },
+      {
+        "type": "link_list",
+        "id": "tp_menu1",
+        "label": "Top Menu",
+        "default": "main-menu",
+        "info": "This menu will shown on top mega menu hover"
+      },
+      {
+        "type": "link_list",
+        "id": "tp_menu2",
+        "label": "Top Menu",
+        "default": "main-menu",
+        "info": "This menu will shown on top mega menu hover"
+      },
+      {
+        "type": "link_list",
+        "id": "tp_menu3",
+        "label": "Top Menu",
+        "default": "main-menu",
+        "info": "This menu will shown on top mega menu hover"
+      }
+    ]
+  }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
