@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "image_text": {
+      "type": "image-text",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "image_text"
+  ]
+}
